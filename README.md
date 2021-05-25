@@ -26,8 +26,8 @@ src
 ├── reportWebVitals.js
 ├── setupTests.js
 └── utils
-├── index.js
-└── index.test.js
+  ├── index.js
+  └── index.test.js
 ```
 
 ### `App.js`
