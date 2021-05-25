@@ -1,6 +1,10 @@
 # Price Calculator
 
-tl;dr: run `yarn start` and open [http://localhost:3000](http://localhost:3000)
+tl;dr: run `yarn && yarn start` and open [http://localhost:3000](http://localhost:3000)
+
+
+
+<img width="400" align="right" src="https://user-images.githubusercontent.com/84806712/119553766-2b3ba400-bd59-11eb-8e75-7a7d596159ae.png" />
 
 ## Noteable Files
 
