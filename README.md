@@ -1,6 +1,60 @@
-# Getting Started with Create React App
+# Price Calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+tl;dr: run `yarn start` and open [http://localhost:3000](http://localhost:3000)
+
+## Noteable Files
+
+```
+src
+├── App.css
+├── App.js
+├── App.test.js
+├── components
+│   ├── ItemInput.js
+│   ├── ItemInput.test.js
+│   ├── PriceTable.js
+│   ├── Receipt.js
+│   └── index.js
+├── constants
+│   └── index.js
+├── hooks
+│   ├── index.js
+│   ├── useGroceryList.js
+│   └── useGroceryList.test.js
+├── index.css
+├── index.js
+├── reportWebVitals.js
+├── setupTests.js
+└── utils
+├── index.js
+└── index.test.js
+```
+
+### `App.js`
+
+`App.js` is the entry point for our application-specific code. It holds the main state items -- the user string and any calculated values for the grocery items, passing them down to components as props when necessary.
+
+This existing state could easily be abstracted into React Context, Redux, or any more robust state management solution as the app scales.
+
+### `useGroceryList.js`
+
+`useGroceryList.js` is a custom hook that acts as the "controller" for the app. It takes the comma-separated string as an input, and updates the totals and prices accordingly when it changes.
+
+### `useGroceryList.js`
+
+`useGroceryList.js` is a custom hook that acts as the "controller" for the app. It takes the comma-separated string as an input, and updates the totals and prices accordingly when it changes.
+
+### `PriceTable.js`
+
+`PriceTable.js` is the table of prices and sales. This is a "dumb component" that simply renders a view based on some constants.
+
+### `ItemInput.js`
+
+`ItemInput.js` is the text input box. It communicates "up" to the App with any changes to the input.
+
+### `Receipt.js`
+
+`Receipt.js` is the table of totals. This is a "dumb component" that simply renders a view based on the results of `useGroceryList`, which are passed in from `App`.
 
 ## Available Scripts
 
@@ -28,43 +82,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
